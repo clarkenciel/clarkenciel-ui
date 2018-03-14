@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Letter = props =>
-  <span>{ props.letter }</span>
+const Letter = ({ letter, onHover, style }) =>
+  <span
+    onMouseOver={() => onHover(letter, style)}
+    style={style}>
+    { letter }
+  </span>
 
 export default Letter
