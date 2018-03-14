@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
+import { shallow } from 'enzyme'
 import { spy } from 'sinon'
 import { expect } from 'chai'
 
@@ -13,7 +13,7 @@ describe('<Letter />', () => {
 
   it('should pass the letter and style to the onHover callback', () => {
     const check = spy()
-    const letter = mount(<Letter
+    const letter = shallow(<Letter
       letter="a"
       style={{ color: 'red' }}
       onHover={check}
