@@ -5,7 +5,7 @@ import linkStyle from './styles/linkStyle'
 
 const Link = ({ text, url, onHover, style }) => (
   <a href={url}>
-    <Text text={text} onHover={onHover} style={merge(style, linkStyle)} />
+    <Text text={text} onHover={onHover} style={merge(linkStyle, style)} />
   </a>
 )
 
