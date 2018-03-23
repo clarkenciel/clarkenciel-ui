@@ -1,6 +1,6 @@
 import R from 'ramda'
 
-const Letter = (character, size, style) => ({ character, size, style })
+const Letter = R.curryN(3, (size, style, character) => ({ character, size, style }))
 export default Letter
 
 const size = R.lensProp('size')
