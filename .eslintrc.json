@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "mocha": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -12,9 +13,11 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+      "mocha",
+      "react"
     ],
     "rules": {
+      "mocha/no-exclusive-tests": "error",
         "indent": [
             "error",
             2
